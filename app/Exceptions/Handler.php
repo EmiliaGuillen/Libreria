@@ -45,6 +45,10 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
+            if (    $e->getStatusCode()== 404) {
+                 return response("Página no encontrada");
+            }
+
         return parent::render($request, $e);
     }
 }
