@@ -12,8 +12,16 @@
         <form action="/form" method="POST">
         <label>Nombre:</label>
         <input type="text" name="nombre">
+        <label>Nick:</label>
+        <input type="text" name="nick">
+        <label>email:</label>
+        <input type="email" name="email">
+        <label>password:</label>
+        <input type="password" name="password">
+        <label>telefono:</label>
+        <input type="text" name="telefono"> 
 
-        <input type="submit" name="enviar">
+        <input type="submit"/>
 
 
     </body>

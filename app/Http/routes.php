@@ -1,21 +1,19 @@
 <?php
 
+use App\Usuario;
+
+Route::get('/user', function(){
+	return Usuario::all();
+});
+
 Route::get('/',function(){
-	return view('home');
-		//return "usando Git";
-});
-/*
-Route::get('user/{id}', function ($id) {
-    return 'User '.$id;
+	return view('website.index2');
 });
 
+Route::get('/controller', 'UsuariosController@index');
 
-Route::get('user/{name}', function ($name) {
-   return "Hola";
-    //->where('name', '[A-Za-z]+');
-})
-->where('name', '[A-Za-z]+');
-*/
-Route::get('/controller', 'ambientesController@index');
+Route::post('/form', 'UsuariosController@store');
 
-Route::POST('/form', 'ambientesController@show');
+Route::get('/tienda',function(){
+	return view('website.tienda');
+});

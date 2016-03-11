@@ -19,4 +19,11 @@ class ambientesController extends Controller
 		return $request->all();
 
 	}
+	public function store2(Request $request);
+	{
+		return 'hdjhsksdja';
+
+	}
+
+
 }
